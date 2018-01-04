@@ -26,7 +26,7 @@ def hello():
     return render_template('hello.html', title='flask test', name=name) #変更
 
 @app.route('/hello', methods=['POST']) #Methodを明示する必要あり
-def hello():
+def hello_post():
     if request.method == 'POST':
         name = request.form['name']
     else:
